@@ -1,0 +1,16 @@
+name: Trigger Test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.3.1
+
+    - name: hello
+      run: echo "hello"
